@@ -1,0 +1,15 @@
+Entrada:
+    - Um vetor v de tamanho n+1. Apenas números de 1 a n no vetor.
+    - Há um (único) número em v que aparece mais de uma vez
+
+Saída:
+    - Encontrar o número repetido em v
+
+Restrições:
+    - 0 < n < 10^5 + 1
+    - O Vetor v não pode ser modificado
+    - Usa apenas uma quantidade constante de espaço
+
+Exemplo:
+    - v = [1, 3, 4, 2, 2]
+    - v = [3, 1, 3, 4, 2]

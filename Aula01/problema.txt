@@ -1,0 +1,1 @@
+Dados dois números inteiros positivos a e b, quantos números entre a e b (inclusive) têm um número ímpar de divisores?
