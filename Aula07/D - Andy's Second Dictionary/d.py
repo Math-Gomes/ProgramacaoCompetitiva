@@ -1,13 +1,11 @@
 from re import findall
 
 text = ''
-words = set()
 
 while True:
     try:
-        text += input().lower().replace('-\n', '')
+        text += input().lower() + '\n'
     except:
-        [words.add(w) for w in findall('[a-z\-]+', text)]
         break
 
-print(*sorted(words), sep='\n', end='')
+print(*sorted(set(findall('[a-z\-]+', text.replace('-\n', '')))), sep='\n')
