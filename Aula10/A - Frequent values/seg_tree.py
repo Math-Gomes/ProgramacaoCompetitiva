@@ -26,15 +26,15 @@ class SegTree:
 
     def tree_repr(self):
         return self.tree_repr_rec(1, 0, self.n - 1, 0)
-
-    """
-        Método Recursivo
-        Constrói uma SegTree 'T' a partir de um array 'A'
-        O primeiro elemento de 'A' está em 'start'
-        O último elemento de 'A' está em 'end'
-        O nó atual da árvore sendo analisado é 'node'
-    """
+  
     def buildRec(self, node, start, end):
+        '''
+            Método Recursivo
+            Constrói uma SegTree 'T' a partir de um array 'A'
+            O primeiro elemento de 'A' está em 'start'
+            O último elemento de 'A' está em 'end'
+            O nó atual da árvore sendo analisado é 'node'
+        '''
         if start == end:
             # Folha representa um elemento único 
             self.T[node] = self.A[start]
@@ -50,27 +50,27 @@ class SegTree:
             # Nó interno tem a SOMA dos dois filhos 
             self.T[node] = self.T[2 * node] + self.T[2 * node + 1]; # <======= IMPORTANTE
         
-    """
-        Interface para a construção da árvore
-        'T' é o vetor que armazenará a árvore
-        'A' é o vetor com os dados originais
-        'n' é o número de elemento em 'A'. 'T' deve ter tamanho '2n'
-        Complexidade de tempo: O(n)
-        Complexidade de espaço: O(n)
-    """
     def build(self):
+        '''
+            Interface para a construção da árvore
+            'T' é o vetor que armazenará a árvore
+            'A' é o vetor com os dados originais
+            'n' é o número de elemento em 'A'. 'T' deve ter tamanho '2n'
+            Complexidade de tempo: O(n)
+            Complexidade de espaço: O(n)
+        '''
         self.buildRec(1, 0, self.n - 1) # A raíz tem nó 1 e representa o segmento A[0, ..., n-1]
 
-    """
-        Função recursiva pela busca da soma de A[l, ..., r]
-        'T' é a SegTree
-        'node' é o nó atual da SegTree sendo inspecionado
-        'start' é o início do intervalo representado em 'node'
-        'end' é o fim do intervalo representado em 'node'
-        'l' é o limite inferior da busca
-        'r' é o limite superior da busca
-    """
     def queryRec(self, node, start, end, l, r):
+        '''
+            Função recursiva pela busca da soma de A[l, ..., r]
+            'T' é a SegTree
+            'node' é o nó atual da SegTree sendo inspecionado
+            'start' é o início do intervalo representado em 'node'
+            'end' é o fim do intervalo representado em 'node'
+            'l' é o limite inferior da busca
+            'r' é o limite superior da busca
+        '''
         if r < start or end < l:
             # [start, end] está fora de [l, r] -- não há interseção
             return 0 # <======= IMPORTANTE
@@ -86,27 +86,27 @@ class SegTree:
 
         return (p1 + p2); # <======= IMPORTANTE
     
-    """
-        Interface para a busca: Soma dos elementos A[l, ..., r]
-        'T' é a SegTree
-        'n' é o número de elementos no vetor 'A'
-        'l' limite inferior da busca
-        'r' limite superior da busca
-    """
     def query(self, l, r): # Soma(A[l, ..., r])
+        '''
+            Interface para a busca: Soma dos elementos A[l, ..., r]
+            'T' é a SegTree
+            'n' é o número de elementos no vetor 'A'
+            'l' limite inferior da busca
+            'r' limite superior da busca
+        '''
         return self.queryRec(1, 0, self.n - 1, l, r)
     
-    """
-        Função Recursiva para atualizar A[idx], fazendo A[idx] += val
-        'T' é a SegTree
-        'A' é o vetor original com os elementos
-        'node' é o nó atual da SegTree sendo inspecionado
-        'start' é o início do intervalo representado por 'node' 
-        'end' é o fim do intervalo representado por 'node' 
-        'idx' é o índice do elemento a ser atualizado
-        'val' é o valor a ser somado a A[idx]
-    """
     def updateRec(self, node, start, end, idx, val):
+        '''
+            Função Recursiva para atualizar A[idx], fazendo A[idx] += val
+            'T' é a SegTree
+            'A' é o vetor original com os elementos
+            'node' é o nó atual da SegTree sendo inspecionado
+            'start' é o início do intervalo representado por 'node' 
+            'end' é o fim do intervalo representado por 'node' 
+            'idx' é o índice do elemento a ser atualizado
+            'val' é o valor a ser somado a A[idx]
+        '''
         if start == end:
             # Nó folha, atualiza A e T
             self.A[idx] += val
@@ -123,15 +123,15 @@ class SegTree:
             # Faz atualização do nó pai 
             self.T[node] = self.T[2 * node] + self.T[2 * node + 1]; # <======= IMPORTANTE
 
-    """
-        Interface para atualizar A[idx], fazendo A[idx] += val
-        'T' é a SegTree
-        'A' é o vetor original com os elementos
-        'n' é o tamanho de 'A'
-        'idx' é o índice do elemento a ser atualizado
-        'val' é o valor a ser somado a A[idx]
-    """
     def update(self, idx, val): # A[idx] = A[idx] + val
+        '''
+            Interface para atualizar A[idx], fazendo A[idx] += val
+            'T' é a SegTree
+            'A' é o vetor original com os elementos
+            'n' é o tamanho de 'A'
+            'idx' é o índice do elemento a ser atualizado
+            'val' é o valor a ser somado a A[idx]
+        '''
         self.updateRec(1, 0, self.n - 1, idx, val)
 
 if __name__ == '__main__':

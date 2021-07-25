@@ -1,0 +1,201 @@
+200
+getMin 15
+removeMin
+insert -5
+insert 13
+getMin 4
+getMin 0
+getMin 4
+getMin 13
+removeMin
+removeMin
+getMin 10
+insert -1
+insert 8
+removeMin
+removeMin
+getMin -3
+getMin 15
+removeMin
+getMin -5
+removeMin
+removeMin
+removeMin
+insert -4
+getMin 2
+getMin 14
+removeMin
+insert 8
+removeMin
+getMin 6
+getMin 1
+insert 8
+removeMin
+getMin 0
+insert 9
+removeMin
+insert 5
+getMin 10
+insert 6
+removeMin
+insert 0
+removeMin
+getMin 6
+getMin -1
+getMin 11
+insert 11
+removeMin
+removeMin
+getMin 15
+getMin -4
+getMin -1
+getMin 6
+insert 9
+getMin -1
+getMin -1
+getMin 10
+insert 4
+removeMin
+insert 3
+removeMin
+removeMin
+getMin 2
+getMin -2
+removeMin
+removeMin
+getMin 10
+getMin 0
+getMin 6
+getMin 0
+getMin -1
+insert 15
+removeMin
+insert 6
+removeMin
+removeMin
+insert 0
+getMin 3
+removeMin
+insert 7
+removeMin
+insert -3
+getMin 5
+removeMin
+insert -5
+removeMin
+removeMin
+getMin 4
+insert 14
+insert 12
+insert 3
+removeMin
+getMin 0
+removeMin
+insert -2
+insert 6
+getMin 13
+removeMin
+removeMin
+getMin 0
+insert 4
+getMin 15
+removeMin
+insert -3
+removeMin
+insert 4
+removeMin
+insert 13
+insert 9
+getMin 5
+insert 11
+insert 12
+removeMin
+removeMin
+removeMin
+removeMin
+getMin 11
+removeMin
+removeMin
+removeMin
+removeMin
+removeMin
+insert -4
+getMin 5
+insert 10
+getMin -1
+getMin 7
+insert 12
+getMin 5
+getMin 0
+removeMin
+getMin -3
+getMin 9
+insert 11
+removeMin
+getMin 1
+removeMin
+getMin -5
+getMin -1
+removeMin
+insert 7
+insert 12
+insert 13
+getMin 1
+insert -1
+insert -2
+insert 2
+getMin 7
+removeMin
+getMin 9
+getMin 4
+getMin 12
+insert 8
+getMin 0
+insert 2
+getMin 12
+insert 11
+removeMin
+removeMin
+getMin -1
+removeMin
+insert -5
+getMin 1
+insert 5
+insert 14
+removeMin
+removeMin
+removeMin
+getMin 12
+removeMin
+insert 12
+insert 3
+getMin 9
+removeMin
+removeMin
+getMin -1
+insert 6
+removeMin
+getMin -5
+insert 3
+removeMin
+insert 10
+removeMin
+getMin 2
+removeMin
+insert -2
+getMin 13
+getMin 5
+removeMin
+removeMin
+insert 9
+insert 3
+insert 2
+getMin 1
+insert -3
+insert 3
+insert -5
+removeMin
+insert 3
+insert 2
+insert 9
+getMin 6

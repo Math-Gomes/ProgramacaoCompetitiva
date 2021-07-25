@@ -1,3 +1,5 @@
+from sys import stdin
+
 class SegTree:
     def __init__(self, A):
         self.A = A
@@ -115,18 +117,18 @@ class SegTree:
 if __name__ == '__main__':
     case = 1
     while True:
-        N = int(input())
+        N = int(stdin.readline())
 
         if not N:
             break
 
         print('Case {}:'.format(case))
-
-        A = [int(input()) for _ in range(N)]
+        
+        A = [int(stdin.readline()) for _ in range(N)]
         st = SegTree(A)
 
         while True:
-            action = input().split()
+            action = stdin.readline().split()
 
             if action[0] == 'END':
                 break
